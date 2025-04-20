@@ -43,7 +43,7 @@ export default function HypertensionForm() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/predict/hypertension", formData);
+      const res = await axios.post("https://carecast-predictions-1.onrender.com/predict/hypertension", formData);
       const prediction = res.data.prediction === 1 ? "🩺 Hypertension Present" : "✅ No Hypertension";
       setResult(prediction);
       setSuggestions(getSuggestions("hypertension", prediction));

@@ -52,7 +52,7 @@ export default function HeartForm() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/predict/heart", formData);
+      const res = await axios.post("https://carecast-predictions-1.onrender.com/predict/heart", formData);
       const prediction = res.data.prediction === 1 ? "🩺 Heart Disease Present" : "✅ No Heart Disease";
       setResult(prediction);
       setSuggestions(getSuggestions("heart", prediction));

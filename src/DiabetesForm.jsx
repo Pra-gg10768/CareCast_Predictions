@@ -40,7 +40,7 @@ export default function DiabetesForm() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/predict/diabetes", formData);
+      const res = await axios.post("https://carecast-predictions-1.onrender.com/predict/diabetes", formData);
       const prediction = res.data.prediction === 1 ? "🩺 Diabetic" : "✅ Not Diabetic";
       setResult(prediction);
       setSuggestions(getSuggestions("diabetes", prediction));
