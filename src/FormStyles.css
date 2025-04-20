@@ -1,0 +1,127 @@
+/* ========== Form Container ========== */
+.form-container {
+    max-width: 500px;
+    padding: 40px;
+    background: rgba(28, 28, 34, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    color: #e0e0e0;
+  }
+  
+  /* ========== Heading ========== */
+  .form-container h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #8f94fb;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+  }
+  
+  /* ========== Labels ========== */
+  .form-container label {
+    display: block;
+    font-size: 15px;
+    color: #b3b6d4;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  /* ========== Inputs ========== */
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0 20px;
+    border-radius: 10px;
+    background-color: #1f1f25;
+    border: 1px solid #2a2a30;
+    color: #f0f0f0;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-container input:focus,
+  .form-container select:focus,
+  .form-container textarea:focus {
+    border-color: #8f94fb;
+    outline: none;
+    box-shadow: 0 0 10px rgba(143, 148, 251, 0.3);
+  }
+  
+  /* ========== Submit Button ========== */
+  .form-container button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #8f94fb, #4e54c8);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background: linear-gradient(to right, #7579e7, #4e54c8);
+    transform: translateY(-3px);
+  }
+  
+  /* ========== Error Message ========== */
+  .error {
+    color: #f87171;
+    font-size: 14px;
+    margin: -10px 0 10px;
+  }
+  
+  /* ========== Notification Toast ========== */
+  .notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2b2b30;
+    padding: 14px 24px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    visibility: hidden;
+  }
+  
+  .notification.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  
+  .notification.error {
+    color: #f87171;
+  }
+  
+  /* ========== Spinner ========== */
+  .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid #7c3aed;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
